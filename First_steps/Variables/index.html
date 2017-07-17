@@ -1,0 +1,11 @@
+<button type="button" name="button">AAAAA</button>
+
+<script type="text/javascript">
+  var button = document.querySelector('button');
+  button.onclick = function () {
+    var name = prompt('Name?')
+    button.textContent = name;
+  }
+  var dog = { name: 'Name', breed: 'Breed' };
+  console.log(typeof(dog));
+</script>
