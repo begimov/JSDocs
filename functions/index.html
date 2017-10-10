@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <title>Apply JavaScript example</title>
+</head>
+<body>
+  //
+</body>
+
+<script type="text/javascript">
+  function d(x) {
+    return x
+  }
+  const a = {
+    prop1: 1,
+    prop2: {
+      g(x) {
+        return x
+      }
+    },
+    f(x) {
+      return this.prop1 + this.prop2.g(x) + x * x
+    }
+  }
+
+  var o = {
+    m: function() {
+      var self = this;
+      console.log(this === o);
+      f()
+      function f() {
+        console.log(this === o);
+        console.log(self === o);
+      }
+    }
+  }
+  const o2 = {
+    m: function() {
+      console.log(this === o2);
+      const f = () => {
+        console.log(this === o2);
+      }
+      f()
+    }
+  }
+  const o3 = {
+    m: () => {
+      console.log(this);
+      const f = () => {
+        console.log(this);
+      }
+      f()
+    }
+  }
+</script>
+
+</html>
