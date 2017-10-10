@@ -58,6 +58,13 @@
     console.log(arguments.callee);
     console.log(arguments.caller);
   }
+  // passing args as object without need to remember their order
+  function easy(args) {
+    function hard(arg1, arg2, arg3) {
+      return 2 * arg1 + arg2 - arg3
+    }
+    return hard(args.first, args.second, args.third)
+  }
 </script>
 
 </html>
