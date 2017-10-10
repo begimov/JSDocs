@@ -63,8 +63,17 @@
     function hard(arg1, arg2, arg3) {
       return 2 * arg1 + arg2 - arg3
     }
-    return hard(args.first, args.second, args.third)
+    return hard(args.first || 0, args.second, args.third)
   }
+  // functions as data
+  const a1 = [(x) => {return x}, 20]
+  console.log(a1[0](a1[1]));
+  const a2 = {
+    a3: function(x) {
+      return 2 * x
+    }
+  }
+  console.log(a2.a3(a1[1]));
 </script>
 
 </html>
