@@ -80,6 +80,12 @@
     return f1.counter++
   }
   f1.counter = 0
+
+  //closures
+  const uniqueInt = (function() {
+    let counter = 0
+    return function() { return counter++ }
+  }())
 </script>
 
 </html>
